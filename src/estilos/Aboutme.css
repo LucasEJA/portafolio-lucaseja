@@ -1,0 +1,31 @@
+.about-me {
+    max-width: 1000px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #cacccd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-me h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .about-me h3 {
+    margin-top: 1.5rem;
+    color: #444;
+  }
+  
+  .about-me ul {
+    padding-left: 20px;
+  }
+  
+  .about-me ul li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .about-me ul li strong {
+    color: #333;
+  }
