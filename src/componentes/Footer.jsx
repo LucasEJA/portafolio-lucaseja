@@ -1,13 +1,13 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import '../estilos/Footer.css';
 
 export const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-icons">
-        <a href="https://www.facebook.com/LucasEJA" target="_blank" rel="noopener noreferrer" className="footer-icon">
-          <FaFacebook size={30} color="#fff" />
+        <a href="https://github.com/LucasEJA" target="_blank" rel="noopener noreferrer" className="footer-icon">
+          <FaGithub size={30} color="#fff" />
         </a>
         <a href="https://www.instagram.com/lucas_enmanuelp/profilecard/?igsh=Y3diNmJzcHI0MDB0" target="_blank" rel="noopener noreferrer" className="footer-icon">
           <FaInstagram size={30} color="#fff" />

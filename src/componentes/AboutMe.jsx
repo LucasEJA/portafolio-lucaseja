@@ -2,6 +2,9 @@ import React from 'react';
 import '../estilos/Aboutme.css'
 
 export const AboutMe = () => {
+  const handleClick = () => {
+    window.open("https://www.canva.com/design/DAGV7V5MqQs/wF7hV91lCGykyNKE8yIVrA/edit?utm_content=DAGV7V5MqQs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton", "_blank");
+  };
   return (
     <div id="aboutme" className="about-me">
       <h2>Sobre mí</h2>
@@ -14,14 +17,16 @@ export const AboutMe = () => {
 
       <h3>Mis habilidades clave incluyen:</h3>
       <ul>
-        <li><strong>Aprendizaje Ágil:</strong> Siempre en la búsqueda de nuevas herramientas y tecnologías.</li>
-        <li><strong>Resiliencia ante Desafíos:</strong> Capacidad para enfrentar y superar obstáculos con perseverancia.</li>
-        <li><strong>Enfoque Optimista y Proactivo:</strong> Con una actitud positiva hacia los retos y una disposición para tomar la iniciativa.</li>
-        <li><strong>Compromiso con la Puntualidad:</strong> Siempre enfocado en cumplir plazos y responsabilidades.</li>
-        <li><strong>Liderazgo:</strong> Habilidad para guiar equipos y coordinar proyectos de manera eficiente.</li>
-        <li><strong>Trabajo en Equipo:</strong> Fomento la colaboración y la sinergia en proyectos colectivos.</li>
-        <li><strong>Dominio de Herramientas Tecnológicas:</strong> Capacidad para utilizar y adaptar herramientas y lenguajes tecnológicos a las necesidades del proyecto.</li>
+        <li>Aprendizaje Ágil</li>
+        <li>Resiliencia ante Desafíos</li>
+        <li>Enfoque Optimista y Proactivo</li>
+        <li>Compromiso con la Puntualidad</li>
+        <li>Liderazgo</li>
+        <li>Trabajo en Equipo</li>
       </ul>
+      <div className='div-button'>
+        <button onClick={handleClick} className="button">Ver mi CV</button>
+      </div>
     </div>
   );
 };

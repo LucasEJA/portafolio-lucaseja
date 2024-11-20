@@ -11,7 +11,7 @@ export const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar-logo">
-                <a href="#home">LucasEJA</a>
+                <a href="#welcome">LucasEJA</a>
             </div>
 
             <div className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>

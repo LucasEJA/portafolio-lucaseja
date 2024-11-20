@@ -15,8 +15,10 @@
 }
 
 .welcome-photo img {
-    width: 35vw;
-    height: 35vw;
+    width: 24vw;
+    height: 24vw;
+    min-width: 150px;
+    min-height: 150px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid #629ba0;
@@ -52,6 +54,7 @@
 
 .welcome-socials a:hover {
     transform: scale(1.1);
-    filter: brightness(1.2);
+    filter: drop-shadow(1px 1px 15px #fff);
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.6);
+    opacity: 0.7;
 }
