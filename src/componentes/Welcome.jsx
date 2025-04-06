@@ -12,7 +12,7 @@ export const Welcome = () => {
             <div className="welcome-info">
                 <p>Hola!!! Mi nombre es</p>
                 <h1>Lucas Jacinto A.</h1>
-                <p className="welcome-quote">"Desarrollador FrontEnd y BackEnd | Apasionado por la tecnología"</p>
+                <p className="welcome-quote">"Desarrollador Full Stack | Apasionado por la tecnología"</p>
             </div>
             <div className="welcome-socials">
                 <a href="https://github.com/LucasEJA" target="_blank" rel="noopener noreferrer">
