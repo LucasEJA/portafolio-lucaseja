@@ -1,0 +1,76 @@
+.abi-container {
+  background-color: #060c0c;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+.abi-content {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.abi-content:hover {
+  transform: scale(1.05);
+}
+
+.abi-title {
+  font-size: 2.5rem;
+  color: #ff6f61;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.abi-message {
+  font-size: 1.2rem;
+  color: #6a4e7f;
+  margin-bottom: 20px;
+}
+
+.abi-subtext {
+  font-size: 1rem;
+  color: #ff4081;
+}
+
+.abi-btn {
+  background-color: #ff6f61;
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.abi-btn:hover {
+  background-color: #e45753;
+}
+
+.fireworks-container {
+  margin-top: 20px;
+  font-size: 2rem;
+  animation: fireworks 1s ease-in-out infinite;
+}
+
+@keyframes fireworks {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}

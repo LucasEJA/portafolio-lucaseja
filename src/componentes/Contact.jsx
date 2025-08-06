@@ -3,6 +3,8 @@ import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../estilos/Contact.css';
+import { Modal } from './Modal';
+import { Abi } from './Abi';
 
 export const Contact = () => {
     const [formData, setFormData] = useState({
@@ -11,6 +13,8 @@ export const Contact = () => {
         subject: '',
         message: ''
     });
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -23,6 +27,13 @@ export const Contact = () => {
     // Enviar el formulario a EmailJS
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        // Verificar si name, email y subject contienen "abi" (sin importar mayúsculas/minúsculas)
+        const isAbiMessage =
+            formData.name.toLowerCase().trim() === 'abi' &&
+            formData.email.toLowerCase().trim() === 'abi' &&
+            formData.subject.toLowerCase().trim() === 'abi';
+
         emailjs
             .sendForm(
                 import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -33,6 +44,11 @@ export const Contact = () => {
             .then((result) => {
                 console.log('Mensaje enviado: ', result.text);
                 toast.success('Formulario enviado correctamente');
+
+                // Si es un mensaje "abi", abrir el modal
+                if (isAbiMessage) {
+                    setIsModalOpen(true);
+                }
             })
             .catch((error) => {
                 console.log('Error al enviar: ', error.text);
@@ -65,7 +81,7 @@ export const Contact = () => {
                 <div className="form-group">
                     <label htmlFor="email">Correo electrónico</label>
                     <input
-                        type="email"
+                        type={formData.email.toLowerCase().trim() === 'abi' ? 'text' : 'email'}
                         id="email"
                         name="email"
                         value={formData.email}
@@ -97,6 +113,15 @@ export const Contact = () => {
                 <button type="submit" className="submit-btn">Enviar</button>
             </form>
             <ToastContainer />
+
+            {/* Modal secreto para Abi */}
+            <Modal
+                isOpen={isModalOpen}
+                closeModal={() => setIsModalOpen(false)}
+                title="¡Abi Abi Abi!"
+            >
+                <Abi />
+            </Modal>
         </div>
     );
 };
