@@ -1,0 +1,49 @@
+.card-project-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-project-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .card-project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .card-project-title {
+    margin: 15px 0;
+    font-size: 1.3rem;
+    color: #333;
+  }
+  
+  .card-project-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  
+  .card-project-link {
+    font-size: 1rem;
+    color: #629ba0;
+    text-decoration: none;
+    border: 2px solid #629ba0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card-project-link:hover {
+    background-color: #629ba0;
+    color: white;
+  }

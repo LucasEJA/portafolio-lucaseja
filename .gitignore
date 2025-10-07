@@ -29,3 +29,5 @@ env/
 
 # Ignorar archivo de variables de entorno
 .env
+
+/context/

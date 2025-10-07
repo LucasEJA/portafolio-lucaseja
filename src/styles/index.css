@@ -1,0 +1,38 @@
+/* Importar variables globales */
+@import './globals/variables.css';
+
+/* Configuración específica de la aplicación */
+:root {
+  /* Sobrescribe el background si es necesario */
+  background: var(--primary-bg);
+  min-width: 500px;
+}
+
+/* Estilos específicos de la aplicación */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mejoras de performance para animaciones */
+* {
+  will-change: auto;
+}
+
+/* Optimización para dispositivos con preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimización para pantallas de alta resolución */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Aquí puedes agregar estilos específicos para pantallas retina */
+}
