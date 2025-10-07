@@ -17,6 +17,10 @@ export const Skills = () => {
       name: "JAVASCRIPT"
     },
     {
+      iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+      name: "BOOTSTRAP"
+    },
+    {
       iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
       name: "PYTHON"
     },
@@ -37,12 +41,20 @@ export const Skills = () => {
       name: "POSTGRESQL"
     },
     {
+      iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg",
+      name: "MARIADB"
+    },
+    {
       iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
       name: "PHP"
     },
     {
       iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       name: "REACT"
+    },
+    {
+      iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+      name: "TAILWIND CSS"
     },
     {
       iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
@@ -57,7 +69,7 @@ export const Skills = () => {
       name: "FIREBASE"
     }
   ];
-  
+
 
   return (
     <div id="skills" className="skills-container">
