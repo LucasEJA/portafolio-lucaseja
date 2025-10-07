@@ -51,8 +51,7 @@
 .glass-card-hover:hover {
   background: rgba(255, 255, 255, 0.08);
   transform: translateY(-5px);
-  box-shadow: 
-    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
     0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
@@ -109,7 +108,7 @@
     margin: var(--spacing-lg) 0;
     padding: var(--spacing-xl);
   }
-  
+
   /* Reducir intensidad de blur en móviles para mejor performance */
   .glass-effect {
     backdrop-filter: blur(5px);

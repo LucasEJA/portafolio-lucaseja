@@ -15,7 +15,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, 
+  background: linear-gradient(
+    135deg,
     #0f172a 0%,
     #1e293b 25%,
     #334155 50%,
@@ -36,7 +37,11 @@
 .wave-1 {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.2) 0%,
+    transparent 70%
+  );
   top: -10%;
   left: -10%;
   animation: subtleFloat1 25s ease-in-out infinite;
@@ -45,7 +50,11 @@
 .wave-2 {
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(139, 92, 246, 0.15) 0%,
+    transparent 70%
+  );
   top: 40%;
   right: -20%;
   animation: subtleFloat2 30s ease-in-out infinite reverse;
@@ -54,7 +63,11 @@
 .wave-3 {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.18) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.18) 0%,
+    transparent 70%
+  );
   bottom: -10%;
   left: 30%;
   animation: subtleFloat3 35s ease-in-out infinite;
@@ -74,33 +87,113 @@
   position: absolute;
   font-size: 14px;
   color: rgba(148, 163, 184, 0.6);
-  font-family: 'Fira Code', 'Monaco', 'Cascadia Code', monospace;
+  font-family: "Fira Code", "Monaco", "Cascadia Code", monospace;
   animation: floatCode 25s linear infinite;
   user-select: none;
   font-weight: 500;
   text-shadow: 0 0 10px rgba(148, 163, 184, 0.3);
 }
 
-.code-particle:nth-child(1) { left: 5%; animation-delay: 0s; animation-duration: 30s; }
-.code-particle:nth-child(2) { left: 15%; animation-delay: -3s; animation-duration: 35s; }
-.code-particle:nth-child(3) { left: 25%; animation-delay: -6s; animation-duration: 25s; }
-.code-particle:nth-child(4) { left: 35%; animation-delay: -9s; animation-duration: 40s; }
-.code-particle:nth-child(5) { left: 45%; animation-delay: -12s; animation-duration: 28s; }
-.code-particle:nth-child(6) { left: 55%; animation-delay: -15s; animation-duration: 33s; }
-.code-particle:nth-child(7) { left: 65%; animation-delay: -18s; animation-duration: 27s; }
-.code-particle:nth-child(8) { left: 75%; animation-delay: -21s; animation-duration: 32s; }
-.code-particle:nth-child(9) { left: 85%; animation-delay: -24s; animation-duration: 36s; }
-.code-particle:nth-child(10) { left: 95%; animation-delay: -27s; animation-duration: 29s; }
-.code-particle:nth-child(11) { left: 10%; animation-delay: -30s; animation-duration: 31s; }
-.code-particle:nth-child(12) { left: 20%; animation-delay: -33s; animation-duration: 34s; }
-.code-particle:nth-child(13) { left: 30%; animation-delay: -36s; animation-duration: 26s; }
-.code-particle:nth-child(14) { left: 40%; animation-delay: -39s; animation-duration: 37s; }
-.code-particle:nth-child(15) { left: 50%; animation-delay: -42s; animation-duration: 30s; }
-.code-particle:nth-child(16) { left: 60%; animation-delay: -45s; animation-duration: 28s; }
-.code-particle:nth-child(17) { left: 70%; animation-delay: -48s; animation-duration: 35s; }
-.code-particle:nth-child(18) { left: 80%; animation-delay: -51s; animation-duration: 32s; }
-.code-particle:nth-child(19) { left: 90%; animation-delay: -54s; animation-duration: 29s; }
-.code-particle:nth-child(20) { left: 12%; animation-delay: -57s; animation-duration: 33s; }
+.code-particle:nth-child(1) {
+  left: 5%;
+  animation-delay: 0s;
+  animation-duration: 30s;
+}
+.code-particle:nth-child(2) {
+  left: 15%;
+  animation-delay: -3s;
+  animation-duration: 35s;
+}
+.code-particle:nth-child(3) {
+  left: 25%;
+  animation-delay: -6s;
+  animation-duration: 25s;
+}
+.code-particle:nth-child(4) {
+  left: 35%;
+  animation-delay: -9s;
+  animation-duration: 40s;
+}
+.code-particle:nth-child(5) {
+  left: 45%;
+  animation-delay: -12s;
+  animation-duration: 28s;
+}
+.code-particle:nth-child(6) {
+  left: 55%;
+  animation-delay: -15s;
+  animation-duration: 33s;
+}
+.code-particle:nth-child(7) {
+  left: 65%;
+  animation-delay: -18s;
+  animation-duration: 27s;
+}
+.code-particle:nth-child(8) {
+  left: 75%;
+  animation-delay: -21s;
+  animation-duration: 32s;
+}
+.code-particle:nth-child(9) {
+  left: 85%;
+  animation-delay: -24s;
+  animation-duration: 36s;
+}
+.code-particle:nth-child(10) {
+  left: 95%;
+  animation-delay: -27s;
+  animation-duration: 29s;
+}
+.code-particle:nth-child(11) {
+  left: 10%;
+  animation-delay: -30s;
+  animation-duration: 31s;
+}
+.code-particle:nth-child(12) {
+  left: 20%;
+  animation-delay: -33s;
+  animation-duration: 34s;
+}
+.code-particle:nth-child(13) {
+  left: 30%;
+  animation-delay: -36s;
+  animation-duration: 26s;
+}
+.code-particle:nth-child(14) {
+  left: 40%;
+  animation-delay: -39s;
+  animation-duration: 37s;
+}
+.code-particle:nth-child(15) {
+  left: 50%;
+  animation-delay: -42s;
+  animation-duration: 30s;
+}
+.code-particle:nth-child(16) {
+  left: 60%;
+  animation-delay: -45s;
+  animation-duration: 28s;
+}
+.code-particle:nth-child(17) {
+  left: 70%;
+  animation-delay: -48s;
+  animation-duration: 35s;
+}
+.code-particle:nth-child(18) {
+  left: 80%;
+  animation-delay: -51s;
+  animation-duration: 32s;
+}
+.code-particle:nth-child(19) {
+  left: 90%;
+  animation-delay: -54s;
+  animation-duration: 29s;
+}
+.code-particle:nth-child(20) {
+  left: 12%;
+  animation-delay: -57s;
+  animation-duration: 33s;
+}
 
 /* Destacar "Hola Mundo" y "Hello World!" */
 .code-particle:nth-child(10),
@@ -131,16 +224,56 @@
   text-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
 }
 
-.tech-symbol:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
-.tech-symbol:nth-child(2) { top: 20%; right: 20%; animation-delay: -3s; }
-.tech-symbol:nth-child(3) { top: 40%; left: 25%; animation-delay: -6s; }
-.tech-symbol:nth-child(4) { top: 60%; right: 15%; animation-delay: -9s; }
-.tech-symbol:nth-child(5) { top: 80%; left: 40%; animation-delay: -12s; }
-.tech-symbol:nth-child(6) { top: 30%; left: 60%; animation-delay: -15s; }
-.tech-symbol:nth-child(7) { top: 50%; right: 30%; animation-delay: -18s; }
-.tech-symbol:nth-child(8) { top: 70%; left: 70%; animation-delay: -21s; }
-.tech-symbol:nth-child(9) { top: 15%; right: 40%; animation-delay: -24s; }
-.tech-symbol:nth-child(10) { top: 85%; right: 25%; animation-delay: -27s; }
+.tech-symbol:nth-child(1) {
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+.tech-symbol:nth-child(2) {
+  top: 20%;
+  right: 20%;
+  animation-delay: -3s;
+}
+.tech-symbol:nth-child(3) {
+  top: 40%;
+  left: 25%;
+  animation-delay: -6s;
+}
+.tech-symbol:nth-child(4) {
+  top: 60%;
+  right: 15%;
+  animation-delay: -9s;
+}
+.tech-symbol:nth-child(5) {
+  top: 80%;
+  left: 40%;
+  animation-delay: -12s;
+}
+.tech-symbol:nth-child(6) {
+  top: 30%;
+  left: 60%;
+  animation-delay: -15s;
+}
+.tech-symbol:nth-child(7) {
+  top: 50%;
+  right: 30%;
+  animation-delay: -18s;
+}
+.tech-symbol:nth-child(8) {
+  top: 70%;
+  left: 70%;
+  animation-delay: -21s;
+}
+.tech-symbol:nth-child(9) {
+  top: 15%;
+  right: 40%;
+  animation-delay: -24s;
+}
+.tech-symbol:nth-child(10) {
+  top: 85%;
+  right: 25%;
+  animation-delay: -27s;
+}
 
 /* Símbolos matemáticos/programación */
 .programming-symbols {
@@ -162,15 +295,36 @@
   text-shadow: 0 0 12px rgba(59, 130, 246, 0.2);
 }
 
-.programming-symbol:nth-child(1) { top: 25%; left: 20%; animation-delay: 0s; }
-.programming-symbol:nth-child(2) { top: 45%; right: 35%; animation-delay: -5s; }
-.programming-symbol:nth-child(3) { top: 65%; left: 30%; animation-delay: -10s; }
-.programming-symbol:nth-child(4) { top: 35%; right: 20%; animation-delay: -15s; }
-.programming-symbol:nth-child(5) { top: 75%; left: 60%; animation-delay: -20s; }
+.programming-symbol:nth-child(1) {
+  top: 25%;
+  left: 20%;
+  animation-delay: 0s;
+}
+.programming-symbol:nth-child(2) {
+  top: 45%;
+  right: 35%;
+  animation-delay: -5s;
+}
+.programming-symbol:nth-child(3) {
+  top: 65%;
+  left: 30%;
+  animation-delay: -10s;
+}
+.programming-symbol:nth-child(4) {
+  top: 35%;
+  right: 20%;
+  animation-delay: -15s;
+}
+.programming-symbol:nth-child(5) {
+  top: 75%;
+  left: 60%;
+  animation-delay: -20s;
+}
 
 /* Animaciones suaves y profesionales */
 @keyframes subtleGradient {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
@@ -179,7 +333,8 @@
 }
 
 @keyframes subtleFloat1 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) translateX(0px) scale(1);
     opacity: 0.15;
   }
@@ -190,7 +345,8 @@
 }
 
 @keyframes subtleFloat2 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) translateX(0px) scale(1);
     opacity: 0.12;
   }
@@ -201,7 +357,8 @@
 }
 
 @keyframes subtleFloat3 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) translateX(0px) rotate(0deg);
     opacity: 0.18;
   }
@@ -220,7 +377,8 @@
     transform: translateY(100vh) translateX(0px) rotate(0deg);
     opacity: 0;
   }
-  10%, 90% {
+  10%,
+  90% {
     opacity: 0.7;
   }
   100% {
@@ -230,7 +388,8 @@
 }
 
 @keyframes floatSymbol {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) scale(1) rotate(0deg);
     opacity: 0.5;
   }
@@ -241,7 +400,8 @@
 }
 
 @keyframes floatProgramming {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) scale(1) rotate(0deg);
     opacity: 0.4;
   }
@@ -257,15 +417,18 @@
 
 /* Responsive - Menos intenso en móviles */
 @media (max-width: 768px) {
-  .wave-1, .wave-2, .wave-3 {
+  .wave-1,
+  .wave-2,
+  .wave-3 {
     opacity: 0.08;
   }
-  
-  .code-particle, .tech-symbol {
+
+  .code-particle,
+  .tech-symbol {
     font-size: 12px;
     opacity: 0.2;
   }
-  
+
   .gradient-layer {
     animation-duration: 30s;
   }
@@ -281,12 +444,13 @@
   .tech-symbol {
     animation: none;
   }
-  
+
   .gradient-layer {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
   }
-  
-  .code-particle, .tech-symbol {
+
+  .code-particle,
+  .tech-symbol {
     opacity: 0.1;
   }
 }
