@@ -1,11 +1,13 @@
-import { Principal } from './paginas/Principal'
-function App() {
+import { Principal } from './paginas/Principal';
+import { AnimatedBackground } from './components/ui/AnimatedBackground';
 
+function App() {
   return (
     <>
-      <Principal></Principal>
+      <AnimatedBackground />
+      <Principal />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
