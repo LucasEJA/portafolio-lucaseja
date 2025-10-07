@@ -22,8 +22,7 @@ export const CODE_SNIPPETS = [
     'filter(item =>',
     'npm run dev',
     'git push origin',
-    'app.use(express.json())',
-
+    'npm run start',
 ];
 
 // Símbolos técnicos
