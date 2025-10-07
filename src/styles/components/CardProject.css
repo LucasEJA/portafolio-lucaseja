@@ -29,8 +29,53 @@
   .card-project-description {
     font-size: 1rem;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     line-height: 1.4;
+  }
+  
+  /* Contenedor de tecnologías */
+  .card-project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+  
+  /* Badge individual de tecnología */
+  .tech-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    color: #374151;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .tech-badge:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Círculo de color de la tecnología */
+  .tech-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  
+  /* Nombre de la tecnología */
+  .tech-name {
+    white-space: nowrap;
+    font-size: 0.75rem;
   }
   
   .card-project-link {

@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { getTechColor } from '../../constants/techColors';
 import '../../styles/components/CardProject.css';
 
 export const CardProject = ({ 
   imageUrl, 
   projectName, 
   description, 
-  linkProy, 
+  linkProy,
+  technologies = [],
   className = '' 
 }) => {
   return (
@@ -20,6 +22,22 @@ export const CardProject = ({
         />
         <h3 className="card-project-title">{projectName}</h3>
         <p className="card-project-description">{description}</p>
+        
+        {/* Tecnologías */}
+        {technologies.length > 0 && (
+          <div className="card-project-technologies">
+            {technologies.map((tech, index) => (
+              <div key={index} className="tech-badge">
+                <span 
+                  className="tech-circle"
+                  style={{ backgroundColor: getTechColor(tech) }}
+                ></span>
+                <span className="tech-name">{tech}</span>
+              </div>
+            ))}
+          </div>
+        )}
+        
         <a 
           href={linkProy} 
           target="_blank" 
@@ -39,5 +57,6 @@ CardProject.propTypes = {
   projectName: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   linkProy: PropTypes.string.isRequired,
+  technologies: PropTypes.arrayOf(PropTypes.string),
   className: PropTypes.string
 };
