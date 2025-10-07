@@ -5,7 +5,7 @@ import '../../styles/components/Skills.css';
 
 export const Skills = () => {
   return (
-    <div id="skills" className="skills-container">
+    <div id="skills" className="skills-container glass-section">
       <div className="skills-wrapper">
         <h2 className="skills-header">Habilidades</h2>
         <p className="skills-subtitle">Estas son las tecnologías con las que tengo experiencia</p>

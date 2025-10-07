@@ -4,7 +4,7 @@ import '../../styles/components/Card.css';
 
 export const Card = ({ iconUrl, skillName, className = '' }) => {
   return (
-    <div className={`card-container ${className}`}>
+    <div className={`card-container glass-skill-card ${className}`}>
       <div className="card-content">
         <img
           src={iconUrl}

@@ -10,9 +10,14 @@
   --card-bg: rgba(255, 255, 255, 0.1);
   
   /* Colores de Texto */
-  --text-primary: #325052;
-  --text-secondary: #333333;
-  --text-muted: #666666;
+  --text-primary: #f8fafc;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  
+  /* Colores de Tema */
+  --theme-bg-primary: #0f172a;
+  --theme-bg-secondary: #1e293b;
+  --theme-bg-card: rgba(255, 255, 255, 0.1);
   
   /* Colores de Acento */
   --accent-hover: rgba(255, 255, 255, 0.2);

@@ -1,0 +1,103 @@
+/* Tema Oscuro - Glassmorphism */
+
+[data-theme="dark"] {
+  /* Fondo base oscuro (por defecto) */
+  --primary-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  --secondary-bg: #1e293b;
+  
+  /* Textos para modo oscuro con mejor contraste */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  
+  /* Colores de tema para modo oscuro */
+  --theme-bg-primary: #0f172a;
+  --theme-bg-secondary: rgba(30, 41, 59, 0.9);
+  --theme-bg-card: rgba(51, 65, 85, 0.4);
+  
+  /* Glassmorphism para modo oscuro */
+  --glass-bg-base: rgba(255, 255, 255, 0.1);
+  --glass-bg-subtle: rgba(255, 255, 255, 0.05);
+  --glass-bg-intense: rgba(255, 255, 255, 0.15);
+  
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-border-subtle: rgba(255, 255, 255, 0.1);
+  --glass-border-intense: rgba(255, 255, 255, 0.3);
+  
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  --glass-shadow-subtle: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+  --glass-shadow-intense: 0 12px 48px 0 rgba(0, 0, 0, 0.6);
+  
+  /* Colores de acento vibrantes */
+  --accent-color-1: #3b82f6;
+  --accent-color-2: #8b5cf6;
+  --accent-color-3: #06b6d4;
+  
+  /* Cards y componentes */
+  --card-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* Ajustes específicos para elementos en modo oscuro */
+[data-theme="dark"] .animated-background .gradient-layer {
+  background: linear-gradient(135deg, 
+    #0f172a 0%,
+    #1e293b 25%,
+    #334155 50%,
+    #1e293b 75%,
+    #0f172a 100%
+  );
+}
+
+[data-theme="dark"] .code-particle {
+  color: rgba(148, 163, 184, 0.6);
+  text-shadow: 0 0 10px rgba(148, 163, 184, 0.3);
+}
+
+[data-theme="dark"] .tech-symbol {
+  color: rgba(139, 92, 246, 0.5);
+  text-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
+}
+
+[data-theme="dark"] .programming-symbol {
+  color: rgba(59, 130, 246, 0.4);
+  text-shadow: 0 0 12px rgba(59, 130, 246, 0.2);
+}
+
+/* Ondas para modo oscuro */
+[data-theme="dark"] .wave-1 {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+  opacity: 0.15;
+}
+
+[data-theme="dark"] .wave-2 {
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+  opacity: 0.12;
+}
+
+[data-theme="dark"] .wave-3 {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.18) 0%, transparent 70%);
+  opacity: 0.18;
+}
+
+/* Glassmorphism optimizado para modo oscuro */
+[data-theme="dark"] .glass-navbar {
+  background: rgba(15, 23, 42, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .glass-footer {
+  background: rgba(15, 23, 42, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .glass-project-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] .glass-project-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.5);
+}

@@ -55,12 +55,12 @@ export const Contact = () => {
     };
 
     return (
-        <div id="contact" className="contact-container">
+        <div id="contact" className="contact-container glass-section">
             <div className="contact-wrapper">
                 <h2>Contactame</h2>
                 <p>Por favor, completa el formulario para contactarme.</p>
                 
-                <form onSubmit={handleSubmit} className="contact-form">
+                <form onSubmit={handleSubmit} className="contact-form glass-form">
                     <div className="form-group">
                         <label htmlFor="name">Nombre</label>
                         <input
@@ -71,6 +71,7 @@ export const Contact = () => {
                             onChange={handleChange}
                             required
                             disabled={isSubmitting}
+                            className="glass-input"
                         />
                     </div>
                     
@@ -84,6 +85,7 @@ export const Contact = () => {
                             onChange={handleChange}
                             required
                             disabled={isSubmitting}
+                            className="glass-input"
                         />
                     </div>
                     
@@ -97,6 +99,7 @@ export const Contact = () => {
                             onChange={handleChange}
                             required
                             disabled={isSubmitting}
+                            className="glass-input"
                         />
                     </div>
                     
@@ -110,12 +113,13 @@ export const Contact = () => {
                             required
                             rows="5"
                             disabled={isSubmitting}
+                            className="glass-input"
                         />
                     </div>
                     
                     <button 
                         type="submit" 
-                        className="submit-btn"
+                        className="submit-btn glass-button"
                         disabled={isSubmitting}
                     >
                         {isSubmitting ? 'Enviando...' : 'Enviar'}

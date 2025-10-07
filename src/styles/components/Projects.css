@@ -1,9 +1,10 @@
 .projects-container {
-    background-color: #0c1b1b;
+    background-color: var(--theme-bg-secondary);
     border-radius: 8px;
-    padding: 2rem;
-    width: 85%;
-    margin: 15px auto;
+    padding: 3rem 2rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
 }
 
 .projects-wrapper {
@@ -13,7 +14,7 @@
 
 .projects-header {
     font-size: 2.25rem;
-    color: white;
+    color: var(--text-primary);
     text-align: center;
     margin-bottom: 3rem;
 }

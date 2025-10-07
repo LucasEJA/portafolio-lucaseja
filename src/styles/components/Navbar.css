@@ -15,20 +15,22 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #0c1b1b;
-    color: white;
+    background-color: var(--theme-bg-secondary);
+    color: var(--text-primary);
     position: sticky;
     top: 0;
     z-index: 1000;
     height: 50px;
+    transition: all var(--transition-normal);
 }
 
 .navbar-logo a {
     font-size: 1.6rem;
     margin: 10px 10px;
-    color: white;
+    color: var(--text-primary);
     text-decoration: none;
     font-weight: bold;
+    transition: color var(--transition-fast);
 }
 
 /* Estilos del menú - pantallas grandes */
@@ -52,16 +54,19 @@ html {
 }
 
 .navbar-links a {
-    color: white;
+    color: var(--text-primary);
     text-decoration: none;
     font-size: 1rem;
     display: flex;
     align-items: center;
-    transition: color 0.2s;
+    transition: all var(--transition-fast);
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
 }
 
 .navbar-links a:hover {
-    color: #f39c12;
+    color: var(--accent-color-1);
+    background: var(--glass-bg-subtle);
 }
 
 .navbar-menu-icon {
@@ -76,8 +81,8 @@ html {
 .navbar-menu-icon .bar {
     width: 100%;
     height: 3px;
-    background-color: white;
-    transition: all 0.2s;
+    background-color: var(--text-primary);
+    transition: all var(--transition-fast);
 }
 
 /* Estilos responsivos */
@@ -86,7 +91,7 @@ html {
         position: absolute;
         top: 60px;
         right: 0;
-        background-color: #0c1b1b;
+        background-color: var(--theme-bg-secondary);
         width: 80%;
         height: 50vh;
         display: none;
@@ -94,6 +99,8 @@ html {
         justify-content: flex-start;
         align-items: center;
         padding-top: 10px;
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        box-shadow: var(--shadow-lg);
     }
 
     .navbar-links.open {

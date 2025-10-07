@@ -4,7 +4,7 @@ import '../../styles/components/Footer.css';
 
 export const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer glass-footer">
       <div className="footer-icons">
         <a 
           href="https://github.com/LucasEJA" 

@@ -1,0 +1,124 @@
+/* Tema Claro - Glassmorphism */
+
+[data-theme="light"] {
+  /* Fondo base más claro */
+  --primary-bg: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+  --secondary-bg: #f1f5f9;
+  
+  /* Textos para modo claro con mejor contraste */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  
+  /* Colores de tema para modo claro */
+  --theme-bg-primary: #f8fafc;
+  --theme-bg-secondary: rgba(241, 245, 249, 0.9);
+  --theme-bg-card: rgba(255, 255, 255, 0.7);
+  
+  /* Glassmorphism adaptado para modo claro */
+  --glass-bg-base: rgba(255, 255, 255, 0.4);
+  --glass-bg-subtle: rgba(255, 255, 255, 0.2);
+  --glass-bg-intense: rgba(255, 255, 255, 0.6);
+  
+  --glass-border: rgba(71, 85, 105, 0.2);
+  --glass-border-subtle: rgba(71, 85, 105, 0.1);
+  --glass-border-intense: rgba(71, 85, 105, 0.3);
+  
+  --glass-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.15);
+  --glass-shadow-subtle: 0 4px 16px 0 rgba(15, 23, 42, 0.1);
+  --glass-shadow-intense: 0 12px 48px 0 rgba(15, 23, 42, 0.2);
+  
+  /* Colores de acento más vibrantes para modo claro */
+  --accent-color-1: #3b82f6;
+  --accent-color-2: #8b5cf6;
+  --accent-color-3: #06b6d4;
+  
+  /* Cards y componentes */
+  --card-bg: rgba(255, 255, 255, 0.5);
+}
+
+/* Ajustes específicos para elementos en modo claro */
+[data-theme="light"] .animated-background .gradient-layer {
+  background: linear-gradient(135deg, 
+    #f8fafc 0%,
+    #e2e8f0 25%,
+    #cbd5e1 50%,
+    #e2e8f0 75%,
+    #f8fafc 100%
+  );
+}
+
+[data-theme="light"] .code-particle {
+  color: rgba(71, 85, 105, 0.6);
+  text-shadow: 0 0 10px rgba(71, 85, 105, 0.3);
+}
+
+[data-theme="light"] .tech-symbol {
+  color: rgba(99, 102, 241, 0.5);
+  text-shadow: 0 0 8px rgba(99, 102, 241, 0.3);
+}
+
+[data-theme="light"] .programming-symbol {
+  color: rgba(168, 85, 247, 0.4);
+  text-shadow: 0 0 12px rgba(168, 85, 247, 0.2);
+}
+
+/* Ondas más sutiles para modo claro */
+[data-theme="light"] .wave-1 {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+  opacity: 0.8;
+}
+
+[data-theme="light"] .wave-2 {
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, transparent 70%);
+  opacity: 0.6;
+}
+
+[data-theme="light"] .wave-3 {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
+  opacity: 0.7;
+}
+
+/* Ajustes para mejor contraste en modo claro */
+[data-theme="light"] .glass-navbar {
+  background: rgba(71, 85, 105, 0.8);
+  border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+  box-shadow: 0 2px 20px rgba(71, 85, 105, 0.2);
+}
+
+[data-theme="light"] .glass-footer {
+  background: rgba(71, 85, 105, 0.7);
+  border-top: 1px solid rgba(71, 85, 105, 0.3);
+  box-shadow: 0 -2px 20px rgba(71, 85, 105, 0.15);
+}
+
+/* Textos del navbar en modo claro */
+[data-theme="light"] .glass-navbar,
+[data-theme="light"] .glass-navbar * {
+  color: #f8fafc !important;
+}
+
+[data-theme="light"] .glass-navbar a:hover {
+  color: #cbd5e1 !important;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Textos del footer en modo claro */
+[data-theme="light"] .glass-footer,
+[data-theme="light"] .glass-footer * {
+  color: #f8fafc !important;
+}
+
+[data-theme="light"] .glass-footer a:hover {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="light"] .glass-project-card {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+[data-theme="light"] .glass-project-card:hover {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: rgba(148, 163, 184, 0.3);
+}

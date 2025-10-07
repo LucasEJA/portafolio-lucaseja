@@ -1,25 +1,26 @@
 .about-me {
   max-width: 1000px;
-  width: 80%;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: #cacccd;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 3rem 2rem;
+  background-color: var(--theme-bg-card);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
 }
 
 .about-me h2 {
   text-align: center;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .about-me h3 {
   margin-top: 1.5rem;
-  color: #444;
+  color: var(--text-secondary);
 }
 
 .about-me p {
   text-align: justify;
+  color: var(--text-secondary);
 }
 
 .about-me ul {
@@ -28,10 +29,11 @@
 
 .about-me ul li {
   margin-bottom: 0.8rem;
+  color: var(--text-secondary);
 }
 
 .about-me ul li strong {
-  color: #333;
+  color: var(--text-primary);
 }
 
 .div-button {
@@ -41,20 +43,23 @@
 .button {
   text-align: center;
   padding: 10px;
-  background-color: #0c1b1b;
-  color: white;
+  background-color: var(--accent-color-1);
+  color: var(--text-primary);
   font-size: 1.1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
 }
 
 .button:hover {
-  background-color: #4d7f83;
+  background-color: var(--accent-color-2);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
 .button:active {
-  background-color: #3e6666;
+  background-color: var(--accent-color-3);
+  transform: translateY(0);
 }

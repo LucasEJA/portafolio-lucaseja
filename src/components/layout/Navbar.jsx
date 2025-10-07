@@ -10,7 +10,7 @@ export const Navbar = () => {
     };
 
     return (
-        <nav className="navbar">
+        <nav className="navbar glass-navbar">
             <div className="navbar-logo">
                 <a href="#welcome">LucasEJA</a>
             </div>

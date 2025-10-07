@@ -1,0 +1,237 @@
+/* Sistema de Glassmorphism - Variables y utilidades base */
+
+:root {
+  /* Variables de glassmorphism */
+  --glass-bg-base: rgba(255, 255, 255, 0.1);
+  --glass-bg-subtle: rgba(255, 255, 255, 0.05);
+  --glass-bg-intense: rgba(255, 255, 255, 0.15);
+  
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-border-subtle: rgba(255, 255, 255, 0.1);
+  --glass-border-intense: rgba(255, 255, 255, 0.3);
+  
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  --glass-shadow-subtle: 0 4px 16px 0 rgba(31, 38, 135, 0.2);
+  --glass-shadow-intense: 0 12px 48px 0 rgba(31, 38, 135, 0.5);
+  
+  --glass-blur: 10px;
+  --glass-blur-subtle: 5px;
+  --glass-blur-intense: 20px;
+  
+  /* Variables de tema que se sobrescribirán */
+  --theme-bg-primary: var(--primary-bg);
+  --theme-text-primary: var(--text-primary);
+  --theme-text-secondary: var(--text-secondary);
+}
+
+/* Clases base de glassmorphism */
+.glass-base {
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  background: var(--glass-bg-base);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: all var(--transition-normal);
+}
+
+/* Niveles de intensidad */
+.glass-subtle {
+  backdrop-filter: blur(var(--glass-blur-subtle));
+  -webkit-backdrop-filter: blur(var(--glass-blur-subtle));
+  background: var(--glass-bg-subtle);
+  border: 1px solid var(--glass-border-subtle);
+  box-shadow: var(--glass-shadow-subtle);
+}
+
+.glass-intense {
+  backdrop-filter: blur(var(--glass-blur-intense));
+  -webkit-backdrop-filter: blur(var(--glass-blur-intense));
+  background: var(--glass-bg-intense);
+  border: 1px solid var(--glass-border-intense);
+  box-shadow: var(--glass-shadow-intense);
+}
+
+/* Componentes específicos */
+.glass-card {
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  background: var(--glass-bg-base);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: all var(--transition-normal);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  margin: var(--spacing-lg) 0;
+}
+
+.glass-navbar {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: var(--glass-bg-subtle);
+  border: 1px solid var(--glass-border-subtle);
+  box-shadow: var(--glass-shadow-subtle);
+  transition: all var(--transition-normal);
+  border-bottom: 1px solid var(--glass-border-subtle);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.glass-footer {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  background: var(--glass-bg-subtle);
+  border: 1px solid var(--glass-border-subtle);
+  box-shadow: var(--glass-shadow-subtle);
+  transition: all var(--transition-normal);
+  border-top: 1px solid var(--glass-border-subtle);
+}
+
+.glass-section {
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  background: var(--glass-bg-base);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: all var(--transition-normal);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-3xl);
+  margin: var(--spacing-2xl) 0;
+}
+
+.glass-project-card {
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  background: var(--glass-bg-base);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: all var(--transition-normal);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.glass-project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--glass-shadow-intense);
+  background: var(--glass-bg-intense);
+  border-color: var(--glass-border-intense);
+}
+
+.glass-skill-card {
+  backdrop-filter: blur(var(--glass-blur-subtle));
+  -webkit-backdrop-filter: blur(var(--glass-blur-subtle));
+  background: var(--glass-bg-subtle);
+  border: 1px solid var(--glass-border-subtle);
+  box-shadow: var(--glass-shadow-subtle);
+  transition: all var(--transition-normal);
+  border-radius: var(--radius-lg);
+}
+
+.glass-skill-card:hover {
+  transform: translateY(-3px);
+  background: var(--glass-bg-base);
+  border-color: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-tech-badge {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: var(--glass-bg-subtle);
+  border: 1px solid var(--glass-border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.glass-tech-badge:hover {
+  background: var(--glass-bg-base);
+  border-color: var(--glass-border);
+  transform: translateY(-1px);
+}
+
+.glass-button {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, var(--accent-color-1), var(--accent-color-2));
+  border: 1px solid var(--accent-color-1);
+  color: var(--text-primary);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left var(--transition-slow);
+}
+
+.glass-button:hover::before {
+  left: 100%;
+}
+
+.glass-button:hover {
+  background: linear-gradient(135deg, var(--accent-color-2), var(--accent-color-3));
+  border-color: var(--accent-color-2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* Estados hover mejorados */
+.glass-hover {
+  transition: all var(--transition-normal);
+}
+
+.glass-hover:hover {
+  background: var(--glass-bg-intense);
+  border-color: var(--glass-border-intense);
+  transform: translateY(-2px);
+}
+
+/* Fallbacks para navegadores sin soporte */
+@supports not (backdrop-filter: blur(10px)) {
+  .glass-base,
+  .glass-subtle,
+  .glass-intense,
+  .glass-card,
+  .glass-navbar,
+  .glass-footer,
+  .glass-section,
+  .glass-project-card {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid rgba(100, 116, 139, 0.3);
+  }
+}
+
+/* Optimización para dispositivos móviles */
+@media (max-width: 768px) {
+  .glass-base,
+  .glass-card,
+  .glass-section {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+  
+  .glass-project-card:hover {
+    transform: none;
+  }
+}
+
+/* Modo de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .glass-base,
+  .glass-card,
+  .glass-project-card,
+  .glass-hover {
+    transition: none;
+  }
+  
+  .glass-project-card:hover,
+  .glass-hover:hover {
+    transform: none;
+  }
+}

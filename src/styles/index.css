@@ -1,6 +1,11 @@
 /* Importar variables globales */
 @import './globals/variables.css';
 @import './globals/glass-effects.css';
+@import './globals/glassmorphism.css';
+
+/* Importar temas */
+@import './themes/glass-light.css';
+@import './themes/glass-dark.css';
 
 /* Configuración específica de la aplicación */
 :root {

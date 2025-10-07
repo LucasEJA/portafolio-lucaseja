@@ -12,7 +12,7 @@ export const CardProject = ({
   className = '' 
 }) => {
   return (
-    <div className={`card-project-container ${className}`}>
+    <div className={`card-project-container glass-project-card ${className}`}>
       <div className="card-project-content">
         <img
           src={imageUrl}
@@ -27,7 +27,7 @@ export const CardProject = ({
         {technologies.length > 0 && (
           <div className="card-project-technologies">
             {technologies.map((tech, index) => (
-              <div key={index} className="tech-badge">
+              <div key={index} className="tech-badge glass-tech-badge">
                 <span 
                   className="tech-circle"
                   style={{ backgroundColor: getTechColor(tech) }}
@@ -42,7 +42,7 @@ export const CardProject = ({
           href={linkProy} 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="card-project-link"
+          className="card-project-link glass-button"
           aria-label={`Ver detalles del proyecto ${projectName}`}
         >
           Ver proyecto

@@ -5,8 +5,8 @@ import lucasImage from '../../assets/lucaseja2.jpg';
 
 export const Welcome = () => {
     return (
-        <div id="welcome" className="welcome-container">
-            <div className="welcome-photo">
+        <div id="welcome" className="welcome-container glass-section">
+            <div className="welcome-photo glass-photo-frame">
                 <img src={lucasImage} alt="Lucas Enmanuel Jacinto Alvarez" />
             </div>
             <div className="welcome-info">
@@ -19,6 +19,7 @@ export const Welcome = () => {
                     href="https://github.com/LucasEJA" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    className="glass-social-link"
                     aria-label="GitHub profile"
                 >
                     <FaGithub size={30} color="#333" />
@@ -27,6 +28,7 @@ export const Welcome = () => {
                     href="https://www.linkedin.com/in/lucas-enmanuel-jacinto-alvarez-249324270/" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    className="glass-social-link"
                     aria-label="LinkedIn profile"
                 >
                     <FaLinkedin size={30} color="#333" />

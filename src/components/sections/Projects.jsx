@@ -5,7 +5,7 @@ import { PROJECTS_DATA } from '../../constants/projectsData';
 
 export const Projects = () => {
   return (
-    <div id="projects" className="projects-container">
+    <div id="projects" className="projects-container glass-section">
       <div className="projects-wrapper">
         <h2 className="projects-header">Proyectos</h2>
 
