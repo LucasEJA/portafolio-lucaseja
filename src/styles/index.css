@@ -16,10 +16,13 @@
 /* Estilos específicos de la aplicación */
 #root {
   min-height: 100vh;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available; /* Safari iOS */
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 /* Mejoras de performance para animaciones */
