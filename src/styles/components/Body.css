@@ -5,9 +5,12 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
+  max-width: 100vw; /* Prevenir desbordamiento */
   min-height: 100vh;
   padding: 2rem 1rem;
   gap: 2rem;
+  overflow-x: hidden; /* Prevenir scroll horizontal */
+  box-sizing: border-box;
 }
 
 /* Asegurar que todas las secciones estén centradas */
@@ -17,7 +20,8 @@ main > * {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 1400px;
+  max-width: min(1400px, 100vw); /* Responsivo pero sin desbordamiento */
+  box-sizing: border-box;
 }
 
 /* Media queries para responsive */
@@ -32,5 +36,24 @@ main > * {
   main {
     padding: 0.5rem 0.25rem;
     gap: 1rem;
+  }
+  
+  main > * {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+  }
+}
+
+/* Específico para iPhone y pantallas similares */
+@media (max-width: 430px) {
+  main {
+    padding: 0.5rem 0.125rem;
+    gap: 0.75rem;
+  }
+  
+  main > * {
+    width: 100%;
+    max-width: calc(100vw - 0.25rem);
   }
 }

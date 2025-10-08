@@ -119,7 +119,9 @@ body {
   min-height: 100dvh; /* Dynamic viewport height */
   min-height: -webkit-fill-available; /* Safari iOS */
   width: 100%;
+  max-width: 100vw; /* Prevenir desbordamiento horizontal */
   overflow-x: hidden; /* Prevenir scroll horizontal */
+  box-sizing: border-box;
 }
 
 /* Utilidades de accesibilidad */
