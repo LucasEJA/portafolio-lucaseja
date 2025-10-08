@@ -21,7 +21,6 @@ export const CODE_SNIPPETS = [
     'map((item) =>',
     'filter(item =>',
     'npm run dev',
-    'git push origin',
     'npm run start',
 ];
 
