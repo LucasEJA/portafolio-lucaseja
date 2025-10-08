@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/components/AboutMe.css';
+import '../../styles/components/Aboutme.css';
 
 export const AboutMe = () => {
   const handleCVClick = () => {
