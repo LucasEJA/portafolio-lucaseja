@@ -8,6 +8,7 @@ main {
   max-width: 100vw; /* Prevenir desbordamiento */
   min-height: 100vh;
   padding: 2rem 1rem;
+  padding-top: calc(60px + 2rem); /* Espacio para navbar fijo + padding normal */
   gap: 2rem;
   overflow-x: hidden; /* Prevenir scroll horizontal */
   box-sizing: border-box;
@@ -28,6 +29,7 @@ main > * {
 @media (max-width: 768px) {
   main {
     padding: 1rem 0.5rem;
+    padding-top: calc(55px + 1rem); /* Altura del navbar móvil + padding */
     gap: 1.5rem;
   }
 }
@@ -35,6 +37,7 @@ main > * {
 @media (max-width: 480px) {
   main {
     padding: 0.5rem 0.25rem;
+    padding-top: calc(50px + 0.5rem); /* Altura del navbar móvil pequeño + padding */
     gap: 1rem;
   }
   

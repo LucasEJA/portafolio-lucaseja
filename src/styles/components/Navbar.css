@@ -3,7 +3,7 @@
 #projects,
 #skills,
 #contact {
-    scroll-margin-top: 85px;
+    scroll-margin-top: 80px; /* Ajustado para navbar fijo de 60px + margen */
 }
 
 html {
@@ -14,14 +14,21 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 15px 20px; /* Aumentado de 10px a 15px */
     background-color: var(--theme-bg-secondary);
     color: var(--text-primary);
-    position: sticky;
+    position: fixed; /* Cambiado a fixed para asegurar que funcione */
     top: 0;
-    z-index: 1000;
-    height: 50px;
+    left: 0;
+    right: 0;
+    z-index: var(--z-fixed); /* Usando variable z-index más alta */
+    height: 60px; /* Aumentado de 50px a 60px */
+    width: 100%;
+    max-width: 100vw;
     transition: all var(--transition-normal);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-sizing: border-box;
 }
 
 .navbar-logo a {
@@ -87,9 +94,14 @@ html {
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 12px 15px; /* Ajustado para móviles */
+        height: 55px; /* Ligeramente menor en móviles */
+    }
+
     .navbar-links {
         position: absolute;
-        top: 60px;
+        top: 55px; /* Ajustado a la nueva altura */
         right: 0;
         background-color: var(--theme-bg-secondary);
         width: 80%;
@@ -101,6 +113,8 @@ html {
         padding-top: 10px;
         border-radius: 0 0 var(--radius-lg) var(--radius-lg);
         box-shadow: var(--shadow-lg);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
     .navbar-links.open {
@@ -126,5 +140,26 @@ html {
 
     .navbar-menu-icon {
         display: flex;
+    }
+}
+
+/* Ajuste para móviles pequeños */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 12px;
+        height: 50px;
+    }
+    
+    .navbar-links {
+        top: 50px;
+        width: 85%;
+    }
+    
+    #welcome,
+    #aboutme,
+    #projects,
+    #skills,
+    #contact {
+        scroll-margin-top: 65px; /* Ajustado para navbar fijo móvil */
     }
 }
