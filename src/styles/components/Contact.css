@@ -37,7 +37,7 @@ label {
 
 input,
 textarea {
-  width: 95%;
+  width: 100%;
   padding: 10px;
   border: 1px solid var(--glass-border);
   background-color: var(--glass-bg-subtle);
