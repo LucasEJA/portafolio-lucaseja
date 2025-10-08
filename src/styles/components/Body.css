@@ -9,6 +9,7 @@ main {
   min-height: 100vh;
   padding: 2rem 1rem;
   padding-top: calc(60px + 2rem); /* Espacio para navbar fijo + padding normal */
+  margin-top: 2rem;
   gap: 2rem;
   overflow-x: hidden; /* Prevenir scroll horizontal */
   box-sizing: border-box;
