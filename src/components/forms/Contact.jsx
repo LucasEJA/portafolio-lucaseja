@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 import '../../styles/components/Contact.css';
 
 export const Contact = () => {
@@ -42,7 +41,7 @@ export const Contact = () => {
                 e.target,
                 import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             );
-            
+
             console.log('Mensaje enviado: ', result.text);
             toast.success('¡Mensaje enviado correctamente! Te responderé pronto.');
             resetForm();
@@ -59,7 +58,7 @@ export const Contact = () => {
             <div className="contact-wrapper">
                 <h2>Contactame</h2>
                 <p>Por favor, completa el formulario para contactarme.</p>
-                
+
                 <form onSubmit={handleSubmit} className="contact-form glass-form">
                     <div className="form-group">
                         <label htmlFor="name">Nombre</label>
@@ -74,7 +73,7 @@ export const Contact = () => {
                             className="glass-input"
                         />
                     </div>
-                    
+
                     <div className="form-group">
                         <label htmlFor="email">Correo electrónico</label>
                         <input
@@ -88,7 +87,7 @@ export const Contact = () => {
                             className="glass-input"
                         />
                     </div>
-                    
+
                     <div className="form-group">
                         <label htmlFor="subject">Asunto</label>
                         <input
@@ -102,7 +101,7 @@ export const Contact = () => {
                             className="glass-input"
                         />
                     </div>
-                    
+
                     <div className="form-group">
                         <label htmlFor="message">Mensaje</label>
                         <textarea
@@ -116,27 +115,15 @@ export const Contact = () => {
                             className="glass-input"
                         />
                     </div>
-                    
-                    <button 
-                        type="submit" 
+
+                    <button
+                        type="submit"
                         className="submit-btn glass-button"
                         disabled={isSubmitting}
                     >
                         {isSubmitting ? 'Enviando...' : 'Enviar'}
                     </button>
                 </form>
-                
-                <ToastContainer
-                    position="top-right"
-                    autoClose={5000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                />
             </div>
         </div>
     );
