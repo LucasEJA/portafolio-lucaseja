@@ -1,5 +1,5 @@
 import React from 'react';
-import { Welcome, AboutMe, Projects, Skills } from './sections';
+import { Welcome, AboutMe, Projects, Skills, Certifications } from './sections';
 import { Contact } from './forms';
 import '../styles/components/Body.css';
 
@@ -10,6 +10,7 @@ export const Body = () => {
       <AboutMe />
       <Projects />
       <Skills />
+      <Certifications />
       <Contact />
     </main>
   );
