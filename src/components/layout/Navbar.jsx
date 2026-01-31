@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaHome, FaUser, FaProjectDiagram, FaTools, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaUser, FaProjectDiagram, FaTools, FaEnvelope, FaCertificate } from 'react-icons/fa';
 import '../../styles/components/Navbar.css';
 
 export const Navbar = () => {
@@ -39,6 +39,12 @@ export const Navbar = () => {
                         <a href="#skills">
                             <FaTools className="icon" size={20} color="#fff" />
                             Habilidades
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#certifications">
+                            <FaCertificate className="icon" size={20} color="#fff" />
+                            Certificados
                         </a>
                     </li>
                     <li>
