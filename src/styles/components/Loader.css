@@ -14,14 +14,20 @@
   isolation: isolate;
 }
 
-.loader-grid {
+.loader-pattern {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
-  background-size: 40px 40px;
-  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  opacity: 0.22;
   pointer-events: none;
+}
+
+.loader-pattern circle,
+.loader-pattern polygon {
+  fill: none;
+  stroke: rgba(148, 163, 184, 0.45);
+  stroke-width: 1.5;
 }
 
 .loader-title {

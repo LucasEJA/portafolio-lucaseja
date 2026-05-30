@@ -132,7 +132,35 @@ export const Loader = () => {
           exit={{ y: '-100%' }}
           transition={{ duration: 0.92, ease: EXIT_EASE }}
         >
-          <div className="loader-grid" aria-hidden="true" />
+          <svg
+            className="loader-pattern"
+            aria-hidden="true"
+            viewBox="0 0 1000 1000"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            <defs>
+              <pattern
+                id="loaderPattern"
+                patternUnits="userSpaceOnUse"
+                width="120"
+                height="120"
+                patternTransform="translate(60 60)"
+              >
+                <g transform="translate(60 60)">
+                  {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
+                    <circle
+                      key={`petal-${i}`}
+                      cx={18 * Math.cos((i * Math.PI) / 4)}
+                      cy={18 * Math.sin((i * Math.PI) / 4)}
+                      r={12}
+                    />
+                  ))}
+                  <polygon points="40 0 0 40 -40 0 0 -40" />
+                </g>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#loaderPattern)" />
+          </svg>
 
           <h1 className="loader-title" style={{ fontSize: 'clamp(40px, 9vw, 96px)' }}>
             {LETTERS.map((char, index) => (
