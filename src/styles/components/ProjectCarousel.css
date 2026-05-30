@@ -35,7 +35,7 @@
 }
 
 .project-carousel-slide .card-project-image {
-  height: 210px;
+  height: clamp(140px, 20vw, 190px);
   object-fit: contain;
   object-position: center;
   background-color: rgba(15, 23, 42, 0.25);
@@ -79,12 +79,6 @@
   margin-right: 8px;
 }
 
-@media (max-width: 1024px) {
-  .project-carousel-slide .card-project-image {
-    height: 200px;
-  }
-}
-
 @media (max-width: 768px) {
   .project-carousel-slide {
     padding: 0 8px;
@@ -96,8 +90,3 @@
   }
 }
 
-@media (max-width: 480px) {
-  .project-carousel-slide .card-project-image {
-    height: 180px;
-  }
-}

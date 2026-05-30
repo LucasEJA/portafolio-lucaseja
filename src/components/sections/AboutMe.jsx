@@ -10,7 +10,7 @@ export const AboutMe = () => {
   };
 
   return (
-    <div id="aboutme" className="about-me glass-section">
+    <section id="aboutme" className="about-me glass-section section-shell">
       <h2>Sobre mí</h2>
       <p>
         Soy Ingeniero Informático, con una profunda pasión por la tecnología y un enfoque constante hacia el aprendizaje y la mejora continua. Mi fascinación por los avances tecnológicos me ha impulsado a desarrollar una sólida base de conocimientos y habilidades que me permiten abordar desafíos informáticos con eficacia y creatividad.
@@ -34,6 +34,6 @@ export const AboutMe = () => {
           Ver mi CV
         </button>
       </div>
-    </div>
+    </section>
   );
 };

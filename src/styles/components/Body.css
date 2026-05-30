@@ -3,61 +3,62 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
   max-width: 100vw; /* Prevenir desbordamiento */
-  min-height: 100vh;
-  padding: 2rem 1rem;
-  padding-top: calc(60px + 2rem); /* Espacio para navbar fijo + padding normal */
-  margin-top: 2rem;
-  gap: 2rem;
+  min-height: 100dvh;
+  padding: var(--section-gap);
+  padding-top: calc(var(--nav-height) + var(--section-gap));
+  margin-top: 0;
+  gap: var(--section-gap);
   overflow-x: hidden; /* Prevenir scroll horizontal */
   box-sizing: border-box;
+  scroll-snap-type: y mandatory;
 }
 
-/* Asegurar que todas las secciones estén centradas */
-main > * {
+/* Base para todas las secciones */
+.section-shell {
+  width: min(100%, var(--section-max-width));
+  min-height: calc(100dvh - var(--nav-height));
+  margin: 0 auto;
+  padding: var(--section-padding-vertical) var(--section-padding-horizontal);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: min(1400px, 100vw); /* Responsivo pero sin desbordamiento */
   box-sizing: border-box;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.section-shell.glass-section {
+  margin: 0 auto;
+  padding: var(--section-padding-vertical) var(--section-padding-horizontal);
+}
+
+.section-shell + .section-shell {
+  margin-top: var(--section-gap);
 }
 
 /* Media queries para responsive */
 @media (max-width: 768px) {
   main {
-    padding: 1rem 0.5rem;
-    padding-top: calc(55px + 1rem); /* Altura del navbar móvil + padding */
-    gap: 1.5rem;
+    padding: calc(var(--section-gap) * 1.25);
+    padding-top: calc(var(--nav-height) + (var(--section-gap) * 1.25));
+  }
+
+  .section-shell {
+    min-height: calc(100dvh - var(--nav-height) - (var(--section-gap) * 1.5));
+    padding: clamp(1.25rem, 6vw, 2rem);
   }
 }
 
 @media (max-width: 480px) {
   main {
-    padding: 0.5rem 0.25rem;
-    padding-top: calc(50px + 0.5rem); /* Altura del navbar móvil pequeño + padding */
-    gap: 1rem;
+    padding: calc(var(--section-gap) * 1.1);
+    padding-top: calc(var(--nav-height) + (var(--section-gap) * 1.1));
   }
-  
-  main > * {
-    width: 100%;
-    max-width: 100vw;
-    margin: 0;
-  }
-}
 
-/* Específico para iPhone y pantallas similares */
-@media (max-width: 430px) {
-  main {
-    padding: 0.5rem 0.125rem;
-    gap: 0.75rem;
-  }
-  
-  main > * {
-    width: 100%;
-    max-width: calc(100vw - 0.25rem);
+  .section-shell {
+    min-height: calc(100dvh - var(--nav-height) - (var(--section-gap) * 1.25));
+    padding: clamp(1rem, 7vw, 1.75rem);
   }
 }

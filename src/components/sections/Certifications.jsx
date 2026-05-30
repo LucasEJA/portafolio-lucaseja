@@ -5,7 +5,7 @@ import { CERTIFICATIONS_DATA } from '../../constants/certificationsData';
 
 export const Certifications = () => {
     return (
-        <div id="certifications" className="certifications-container glass-section">
+        <section id="certifications" className="certifications-container glass-section section-shell">
             <div className="certifications-wrapper">
                 <h2 className="certifications-header">Certificados</h2>
 
@@ -25,6 +25,6 @@ export const Certifications = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };

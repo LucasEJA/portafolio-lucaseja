@@ -5,7 +5,7 @@ import '../../styles/components/Skills.css';
 
 export const Skills = () => {
   return (
-    <div id="skills" className="skills-container glass-section">
+    <section id="skills" className="skills-container glass-section section-shell">
       <div className="skills-wrapper">
         <h2 className="skills-header">Habilidades</h2>
         <p className="skills-subtitle">Estas son las tecnologías con las que tengo experiencia</p>
@@ -20,6 +20,6 @@ export const Skills = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };

@@ -5,7 +5,7 @@ import lucasImage from '../../assets/lucaseja2.jpg';
 
 export const Welcome = () => {
     return (
-        <div id="welcome" className="welcome-container glass-section">
+        <section id="welcome" className="welcome-container glass-section section-shell">
             <div className="welcome-photo glass-photo-frame">
                 <img src={lucasImage} alt="Lucas Enmanuel Jacinto Alvarez" />
             </div>
@@ -34,6 +34,6 @@ export const Welcome = () => {
                     <FaLinkedin size={30} color="#333" />
                 </a>
             </div>
-        </div>
+        </section>
     );
 };

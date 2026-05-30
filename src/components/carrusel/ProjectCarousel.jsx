@@ -1,8 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { PROJECTS_DATA } from '../../constants/projectsData';
+import { getTechColor } from '../../constants/techColors';
 import { CardProject } from '../ui/CardProject';
+import { Modal } from '../ui/Modal';
 import '../../styles/components/ProjectCarousel.css';
+import '../../styles/components/ProjectModal.css';
 
 const AUTO_SLIDE_DURATION = 8000;
 const MANUAL_PAUSE_DURATION = 10000;
@@ -44,6 +47,8 @@ export const ProjectCarousel = () => {
   const [isAutoPaused, setIsAutoPaused] = useState(false);
   const [isManualTransitioning, setIsManualTransitioning] = useState(false);
   const [isHoverPaused, setIsHoverPaused] = useState(false);
+  const [activeProject, setActiveProject] = useState(null);
+  const isModalOpen = Boolean(activeProject);
 
   const visibleCount = getVisibleCount(viewportWidth);
   const slideWidthPercent = 100 / visibleCount;
@@ -137,7 +142,7 @@ export const ProjectCarousel = () => {
 
     lastTimestampRef.current = null;
 
-    if (isAutoPaused || isAutoPausedRef.current || isHoverPaused) {
+    if (isAutoPaused || isAutoPausedRef.current || isHoverPaused || isModalOpen) {
       return undefined;
     }
 
@@ -173,7 +178,7 @@ export const ProjectCarousel = () => {
         animationFrameRef.current = null;
       }
     };
-  }, [isAutoPaused, visibleCount, isHoverPaused]);
+  }, [isAutoPaused, visibleCount, isHoverPaused, isModalOpen]);
 
   useEffect(() => () => {
     if (pauseTimerRef.current) {
@@ -231,14 +236,61 @@ export const ProjectCarousel = () => {
               <CardProject
                 imageUrl={project.imageUrl}
                 projectName={project.projectName}
-                description={project.description}
+                description={project.shortDescription || project.description}
                 linkProy={project.driveLink}
                 technologies={project.technologies}
+                onView={() => setActiveProject(project)}
               />
             </div>
           ))}
         </div>
       </div>
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setActiveProject(null)}
+        title={activeProject?.projectName}
+        size="lg"
+        closeOnOverlayClick
+      >
+        {activeProject && (
+          <div className="project-modal">
+            <div className="project-modal-media">
+              <img
+                src={activeProject.imageUrl}
+                alt={`Vista del proyecto ${activeProject.projectName}`}
+                className="project-modal-image"
+              />
+            </div>
+            <div className="project-modal-content">
+              <p className="project-modal-description">{activeProject.description}</p>
+
+              {activeProject.technologies?.length > 0 && (
+                <div className="project-modal-technologies">
+                  {activeProject.technologies.map((tech, index) => (
+                    <div key={`${tech}-${index}`} className="tech-badge glass-tech-badge">
+                      <span
+                        className="tech-circle"
+                        style={{ backgroundColor: getTechColor(tech) }}
+                      ></span>
+                      <span className="tech-name">{tech}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              <a
+                href={activeProject.driveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-project-link glass-button project-modal-link"
+              >
+                Ver referencias
+              </a>
+            </div>
+          </div>
+        )}
+      </Modal>
     </div>
   );
 };

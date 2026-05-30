@@ -85,6 +85,13 @@
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
+
+  /* Layout */
+  --nav-height: 60px;
+  --section-max-width: 1320px;
+  --section-padding-vertical: clamp(1.5rem, 3vw, 3rem);
+  --section-padding-horizontal: clamp(1rem, 3vw, 2.5rem);
+  --section-gap: clamp(1rem, 3vw, 2rem);
   
   /* Configuración base */
   min-width: 320px;

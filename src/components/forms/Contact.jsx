@@ -54,7 +54,7 @@ export const Contact = () => {
     };
 
     return (
-        <div id="contact" className="contact-container glass-section">
+        <section id="contact" className="contact-container glass-section section-shell">
             <div className="contact-wrapper">
                 <h2>Contactame</h2>
                 <p>Por favor, completa el formulario para contactarme.</p>
@@ -125,6 +125,6 @@ export const Contact = () => {
                     </button>
                 </form>
             </div>
-        </div>
+        </section>
     );
 };

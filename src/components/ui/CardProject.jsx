@@ -9,7 +9,8 @@ export const CardProject = ({
   description, 
   linkProy,
   technologies = [],
-  className = '' 
+  className = '',
+  onView
 }) => {
   return (
     <div className={`card-project-container glass-project-card ${className}`}>
@@ -38,15 +39,26 @@ export const CardProject = ({
           </div>
         )}
         
-        <a 
-          href={linkProy} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="card-project-link glass-button"
-          aria-label={`Ver detalles del proyecto ${projectName}`}
-        >
-          Ver proyecto
-        </a>
+        {onView ? (
+          <button
+            type="button"
+            className="card-project-link glass-button"
+            onClick={onView}
+            aria-label={`Ver detalles del proyecto ${projectName}`}
+          >
+            Ver detalles
+          </button>
+        ) : (
+          <a 
+            href={linkProy} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="card-project-link glass-button"
+            aria-label={`Ver detalles del proyecto ${projectName}`}
+          >
+            Ver detalles
+          </a>
+        )}
       </div>
     </div>
   );
@@ -58,5 +70,6 @@ CardProject.propTypes = {
   description: PropTypes.string.isRequired,
   linkProy: PropTypes.string.isRequired,
   technologies: PropTypes.arrayOf(PropTypes.string),
-  className: PropTypes.string
+  className: PropTypes.string,
+  onView: PropTypes.func
 };
