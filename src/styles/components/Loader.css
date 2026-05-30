@@ -7,8 +7,7 @@
   align-items: center;
   justify-content: center;
   gap: clamp(1.5rem, 4vw, 2.5rem);
-  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.18), transparent 55%),
-    var(--theme-bg-primary);
+  background: linear-gradient(180deg, #0f172a, #1e293b);
   color: var(--text-primary);
   overflow: hidden;
   isolation: isolate;
@@ -26,8 +25,8 @@
 .loader-pattern circle,
 .loader-pattern polygon {
   fill: none;
-  stroke: rgba(148, 163, 184, 0.45);
-  stroke-width: 1.5;
+  stroke: rgba(148, 163, 184, 0.35);
+  stroke-width: 1.25;
 }
 
 .loader-title {
@@ -96,13 +95,13 @@
 }
 
 .loader-progress {
-  color: var(--accent-color-3);
+  color: var(--accent-color-2);
   font-variant-numeric: tabular-nums;
 }
 
 .loader-bar {
   height: 2px;
-  background: var(--accent-color-3);
+  background: linear-gradient(90deg, var(--accent-color-1), var(--accent-color-2));
   transform-origin: left center;
 }
 
