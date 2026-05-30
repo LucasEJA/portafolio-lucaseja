@@ -1,6 +1,6 @@
 .card-project-container {
     width: 100%;
-    max-width: 450px;
+  max-width: 640px;
     margin: 20px;
     border-radius: var(--radius-xl);
     overflow: hidden;
@@ -8,6 +8,7 @@
     box-shadow: var(--shadow-lg);
     transition: all var(--transition-normal);
     border: 1px solid var(--glass-border);
+  height: 100%;
   }
   
   .card-project-container:hover {
@@ -21,13 +22,16 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
+    height: 100%;
   }
   
   .card-project-image {
     width: 100%;
     height: 200px;
     border-radius: var(--radius-lg);
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
+    background-color: rgba(15, 23, 42, 0.25);
     box-shadow: var(--shadow-md);
     transition: transform var(--transition-normal);
   }
@@ -50,6 +54,7 @@
     line-height: 1.6;
     text-align: left;
     margin: 0;
+    flex: 1;
   }
   
   /* Contenedor de tecnologías */
@@ -115,6 +120,7 @@
     align-items: center;
     justify-content: center;
     box-shadow: var(--shadow-md);
+    margin-top: auto;
   }
   
   .card-project-link:hover {
