@@ -59,9 +59,13 @@ export const Contact = () => {
                 <h2>Contactame</h2>
                 <p>Por favor, completa el formulario para contactarme.</p>
 
-                <form onSubmit={handleSubmit} className="contact-form glass-form">
+                <form 
+                    onSubmit={handleSubmit} 
+                    className="contact-form glass-form"
+                    aria-label="Formulario de contacto"
+                >
                     <div className="form-group">
-                        <label htmlFor="name">Nombre</label>
+                        <label htmlFor="name">Nombre <span className="required-indicator" aria-label="requerido">*</span></label>
                         <input
                             type="text"
                             id="name"
@@ -71,11 +75,13 @@ export const Contact = () => {
                             required
                             disabled={isSubmitting}
                             className="glass-input"
+                            aria-required="true"
+                            aria-disabled={isSubmitting}
                         />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="email">Correo electrónico</label>
+                        <label htmlFor="email">Correo electrónico <span className="required-indicator" aria-label="requerido">*</span></label>
                         <input
                             type="email"
                             id="email"
@@ -85,11 +91,13 @@ export const Contact = () => {
                             required
                             disabled={isSubmitting}
                             className="glass-input"
+                            aria-required="true"
+                            aria-disabled={isSubmitting}
                         />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="subject">Asunto</label>
+                        <label htmlFor="subject">Asunto <span className="required-indicator" aria-label="requerido">*</span></label>
                         <input
                             type="text"
                             id="subject"
@@ -99,11 +107,13 @@ export const Contact = () => {
                             required
                             disabled={isSubmitting}
                             className="glass-input"
+                            aria-required="true"
+                            aria-disabled={isSubmitting}
                         />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="message">Mensaje</label>
+                        <label htmlFor="message">Mensaje <span className="required-indicator" aria-label="requerido">*</span></label>
                         <textarea
                             id="message"
                             name="message"
@@ -113,6 +123,8 @@ export const Contact = () => {
                             rows="5"
                             disabled={isSubmitting}
                             className="glass-input"
+                            aria-required="true"
+                            aria-disabled={isSubmitting}
                         />
                     </div>
 
@@ -120,6 +132,8 @@ export const Contact = () => {
                         type="submit"
                         className="submit-btn glass-button"
                         disabled={isSubmitting}
+                        aria-disabled={isSubmitting}
+                        aria-busy={isSubmitting}
                     >
                         {isSubmitting ? 'Enviando...' : 'Enviar'}
                     </button>

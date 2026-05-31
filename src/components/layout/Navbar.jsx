@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaHome, FaUser, FaProjectDiagram, FaTools, FaEnvelope, FaCertificate } from 'react-icons/fa';
+import { FaHome, FaUser, FaProjectDiagram, FaTools, FaEnvelope, FaCertificate, FaFileDownload } from 'react-icons/fa';
 import '../../styles/components/Navbar.css';
 
 export const Navbar = () => {
@@ -54,6 +54,19 @@ export const Navbar = () => {
                         </a>
                     </li>
                 </ul>
+                <div className="navbar-cv-button">
+                    <a 
+                        href="https://www.canva.com/design/DAGV7V5MqQs/wF7hV91lCGykyNKE8yIVrA/edit?utm_content=DAGV7V5MqQs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Descargar mi CV"
+                        title="Abrir CV en nueva pestaña"
+                        className="cv-btn"
+                    >
+                        <FaFileDownload className="icon" size={18} />
+                        Mi CV
+                    </a>
+                </div>
             </div>
 
             <div className="navbar-menu-icon" onClick={toggleMenu}>
