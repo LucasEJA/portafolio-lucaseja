@@ -1,4 +1,5 @@
 export const SKILLS_DATA = [
+  // Frontend
   {
     iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     name: "HTML",
@@ -30,6 +31,13 @@ export const SKILLS_DATA = [
     category: "frontend"
   },
   {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xml/xml-original.svg",
+    name: "XML",
+    category: "frontend"
+  },
+
+  // Backend
+  {
     iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     name: "Python",
     category: "backend"
@@ -49,6 +57,18 @@ export const SKILLS_DATA = [
     name: "PHP",
     category: "backend"
   },
+  {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    name: "Express.js",
+    category: "backend"
+  },
+  {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+    name: "Spring Boot",
+    category: "backend"
+  },
+
+  // Database
   {
     iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
     name: "MySQL",
@@ -70,23 +90,60 @@ export const SKILLS_DATA = [
     category: "database"
   },
   {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    name: "MongoDB",
+    category: "database"
+  },
+
+  // Tools
+  {
     iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     name: "Git",
     category: "tools"
   },
   {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    name: "GitHub",
+    category: "tools"
+  },
+  {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+    name: "Postman",
+    category: "tools"
+  },
+  {
+    iconUrl: "https://img.icons8.com/color/48/power-bi.png",
+    name: "Power BI",
+    category: "tools"
+  },
+
+  // Infrastructure
+  {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg",
+    name: "Nginx",
+    category: "infrastructure"
+  },
+  {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg",
+    name: "Debian Linux",
+    category: "infrastructure"
+  },
+  {
     iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
     name: "Firebase",
-    category: "tools"
-  }
+    category: "infrastructure"
+  },
+  {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+    name: "Google Cloud",
+    category: "infrastructure"
+  },
 ];
 
-// Función utilitaria para filtrar por categoría
 export const getSkillsByCategory = (category) => {
   return SKILLS_DATA.filter(skill => skill.category === category);
 };
 
-// Función para obtener todas las categorías únicas
 export const getSkillCategories = () => {
   return [...new Set(SKILLS_DATA.map(skill => skill.category))];
 };
