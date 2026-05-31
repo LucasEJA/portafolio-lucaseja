@@ -15,16 +15,16 @@ export const Welcome = () => {
                     <div className="welcome-text">
                         <p className="welcome-greeting">Hola! Mi nombre es</p>
                         <h1 className="welcome-name">Lucas Jacinto A.</h1>
-                        <p className="welcome-quote">Desarrollador Full Stack | React • Node.js • PostgreSQL</p>
+                        <p className="welcome-quote">Desarrollador Full Stack | React • Express • Node.js • PostgreSQL</p>
                     </div>
                 </div>
 
                 <StackShowcase />
 
                 <div className="welcome-socials">
-                    <a 
-                        href="https://github.com/LucasEJA" 
-                        target="_blank" 
+                    <a
+                        href="https://github.com/LucasEJA"
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="social-link github-link"
                         aria-label="GitHub profile"
@@ -32,9 +32,9 @@ export const Welcome = () => {
                     >
                         <FaGithub size={32} />
                     </a>
-                    <a 
-                        href="https://www.linkedin.com/in/lucas-enmanuel-jacinto-alvarez-249324270/" 
-                        target="_blank" 
+                    <a
+                        href="https://www.linkedin.com/in/lucas-enmanuel-jacinto-alvarez-249324270/"
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="social-link linkedin-link"
                         aria-label="LinkedIn profile"
