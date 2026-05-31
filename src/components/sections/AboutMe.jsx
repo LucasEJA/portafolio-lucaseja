@@ -11,26 +11,14 @@ export const AboutMe = () => {
 
   return (
     <section id="aboutme" className="about-me glass-section section-shell">
-      <h2>Sobre mí</h2>
-      <p>
-        Soy Ingeniero Informático, con una profunda pasión por la tecnología y un enfoque constante hacia el aprendizaje y la mejora continua. Mi fascinación por los avances tecnológicos me ha impulsado a desarrollar una sólida base de conocimientos y habilidades que me permiten abordar desafíos informáticos con eficacia y creatividad.
-      </p>
-      <p>
-        A lo largo de mi formación en la <strong>Universidad Nacional de Piura (2019-2024)</strong>, he fortalecido mi capacidad para trabajar de manera colaborativa en equipos multidisciplinarios, lo que me ha permitido no solo adquirir conocimientos técnicos, sino también habilidades interpersonales y de liderazgo. Me considero una persona responsable, resiliente y con un enfoque optimista, cualidades que me permiten adaptarme y sobresalir en entornos dinámicos y en constante cambio.
-      </p>
-
-      <h3>Mis habilidades clave incluyen:</h3>
-      <ul>
-        <li>Aprendizaje Ágil</li>
-        <li>Resiliencia ante Desafíos</li>
-        <li>Enfoque Optimista y Proactivo</li>
-        <li>Compromiso con la Puntualidad</li>
-        <li>Liderazgo</li>
-        <li>Trabajo en Equipo</li>
-      </ul>
+      <div className="about-me-content">
+        <p className="about-me-intro">
+          Soy Ingeniero Informático egresado de la UNP (2024). Especializado en desarrollo full-stack con enfoque en calidad y escalabilidad.
+        </p>
+      </div>
       
       <div className="div-button">
-        <button onClick={handleCVClick} className="button glass-button">
+        <button onClick={handleCVClick} className="button glass-button" aria-label="Descargar CV">
           Ver mi CV
         </button>
       </div>

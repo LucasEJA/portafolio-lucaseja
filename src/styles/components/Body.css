@@ -29,6 +29,11 @@ main {
   scroll-snap-stop: always;
 }
 
+/* Welcome section - always full viewport height */
+#welcome {
+  min-height: calc(100dvh - var(--nav-height)) !important;
+}
+
 .section-shell.glass-section {
   margin: 0 auto;
   padding: var(--section-padding-vertical) var(--section-padding-horizontal);
@@ -46,8 +51,22 @@ main {
   }
 
   .section-shell {
-    min-height: calc(100dvh - var(--nav-height) - (var(--section-gap) * 1.5));
+    min-height: auto;
     padding: clamp(1.25rem, 6vw, 2rem);
+  }
+
+  /* Welcome section stays full height on mobile */
+  #welcome {
+    min-height: calc(100dvh - var(--nav-height)) !important;
+  }
+
+  /* Buttons and links: minimum 48px touch target */
+  button, a, input[type="button"], input[type="submit"] {
+    min-height: 48px;
+    min-width: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -58,7 +77,21 @@ main {
   }
 
   .section-shell {
-    min-height: calc(100dvh - var(--nav-height) - (var(--section-gap) * 1.25));
+    min-height: auto;
     padding: clamp(1rem, 7vw, 1.75rem);
+  }
+
+  /* Welcome section stays full height on mobile */
+  #welcome {
+    min-height: calc(100dvh - var(--nav-height)) !important;
+  }
+
+  /* Buttons and links: minimum 48px touch target */
+  button, a, input[type="button"], input[type="submit"] {
+    min-height: 48px;
+    min-width: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }

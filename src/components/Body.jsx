@@ -7,9 +7,9 @@ export const Body = () => {
   return (
     <main>
       <Welcome />
-      <AboutMe />
-      <Projects />
       <Skills />
+      <Projects />
+      <AboutMe />
       <Certifications />
       <Contact />
     </main>

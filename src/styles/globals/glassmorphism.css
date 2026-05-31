@@ -1,22 +1,22 @@
 /* Sistema de Glassmorphism - Variables y utilidades base */
 
 :root {
-  /* Variables de glassmorphism */
-  --glass-bg-base: rgba(255, 255, 255, 0.1);
-  --glass-bg-subtle: rgba(255, 255, 255, 0.05);
-  --glass-bg-intense: rgba(255, 255, 255, 0.15);
+  /* Variables de glassmorphism - REDUCIDO para minimalismo */
+  --glass-bg-base: rgba(255, 255, 255, 0.08);
+  --glass-bg-subtle: rgba(255, 255, 255, 0.04);
+  --glass-bg-intense: rgba(255, 255, 255, 0.12);
   
-  --glass-border: rgba(255, 255, 255, 0.2);
-  --glass-border-subtle: rgba(255, 255, 255, 0.1);
-  --glass-border-intense: rgba(255, 255, 255, 0.3);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-border-subtle: rgba(255, 255, 255, 0.08);
+  --glass-border-intense: rgba(255, 255, 255, 0.25);
   
-  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  --glass-shadow-subtle: 0 4px 16px 0 rgba(31, 38, 135, 0.2);
-  --glass-shadow-intense: 0 12px 48px 0 rgba(31, 38, 135, 0.5);
+  --glass-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.2);
+  --glass-shadow-subtle: 0 2px 8px 0 rgba(31, 38, 135, 0.1);
+  --glass-shadow-intense: 0 8px 32px 0 rgba(31, 38, 135, 0.35);
   
-  --glass-blur: 10px;
-  --glass-blur-subtle: 5px;
-  --glass-blur-intense: 20px;
+  --glass-blur: 6px;
+  --glass-blur-subtle: 3px;
+  --glass-blur-intense: 12px;
   
   /* Variables de tema que se sobrescribirán */
   --theme-bg-primary: var(--primary-bg);
@@ -65,20 +65,19 @@
 }
 
 .glass-navbar {
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  background: var(--glass-bg-subtle);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(15, 23, 42, 0.85);
   border: 1px solid var(--glass-border-subtle);
   box-shadow: var(--glass-shadow-subtle);
   transition: all var(--transition-normal);
   border-bottom: 1px solid var(--glass-border-subtle);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .glass-footer {
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  background: var(--glass-bg-subtle);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(15, 23, 42, 0.85);
   border: 1px solid var(--glass-border-subtle);
   box-shadow: var(--glass-shadow-subtle);
   transition: all var(--transition-normal);
@@ -88,7 +87,7 @@
 .glass-section {
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
-  background: var(--glass-bg-base);
+  background: rgba(30, 41, 59, 0.75);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
   transition: all var(--transition-normal);
@@ -109,10 +108,10 @@
 }
 
 .glass-project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   box-shadow: var(--glass-shadow-intense);
   background: var(--glass-bg-intense);
-  border-color: var(--glass-border-intense);
+  border-color: var(--accent-color-1);
 }
 
 .glass-skill-card {
@@ -133,8 +132,8 @@
 }
 
 .glass-tech-badge {
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   background: var(--glass-bg-subtle);
   border: 1px solid var(--glass-border-subtle);
   transition: all var(--transition-fast);
@@ -147,11 +146,11 @@
 }
 
 .glass-button {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   background: linear-gradient(135deg, var(--accent-color-1), var(--accent-color-2));
   border: 1px solid var(--accent-color-1);
-  color: var(--text-primary);
+  color: white;
   transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
@@ -202,7 +201,7 @@
   .glass-project-card {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    background: rgba(30, 41, 59, 0.8);
+    background: rgba(30, 41, 59, 0.9);
     border: 1px solid rgba(100, 116, 139, 0.3);
   }
 }
@@ -212,8 +211,8 @@
   .glass-base,
   .glass-card,
   .glass-section {
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
   }
   
   .glass-project-card:hover {
