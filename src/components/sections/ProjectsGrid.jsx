@@ -1,24 +1,25 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { PROJECTS_DATA } from '../../constants/projectsData';
 import { CardProject } from '../ui/CardProject';
 import { Modal } from '../ui/Modal';
-import { FaExternalLinkAlt } from 'react-icons/fa';
 import '../../styles/components/ProjectsGrid.css';
 import '../../styles/components/ProjectModal.css';
 
 export const ProjectsGrid = () => {
   const [activeProject, setActiveProject] = useState(null);
+  const [showAll, setShowAll] = useState(false);
   const isModalOpen = Boolean(activeProject);
 
-  // Mostrar 2 proyectos destacados
-  const featuredProjects = PROJECTS_DATA.slice(0, 2);
   const hasMoreProjects = PROJECTS_DATA.length > 2;
+  const visibleProjects = useMemo(() => (
+    showAll ? PROJECTS_DATA : PROJECTS_DATA.slice(0, 2)
+  ), [showAll]);
 
   return (
     <>
       <div className="projects-grid-container">
         <div className="projects-grid">
-          {featuredProjects.map((project) => (
+          {visibleProjects.map((project) => (
             <div key={project.id} className="project-grid-item">
               <CardProject
                 imageUrl={project.imageUrl}
@@ -34,10 +35,14 @@ export const ProjectsGrid = () => {
 
         {hasMoreProjects && (
           <div className="projects-cta">
-            <a href="#projects-gallery" className="view-more-btn glass-button">
-              Ver todos los proyectos
-              <FaExternalLinkAlt size={14} />
-            </a>
+            <button
+              type="button"
+              className="view-more-btn glass-button"
+              onClick={() => setShowAll((prev) => !prev)}
+              aria-expanded={showAll}
+            >
+              {showAll ? 'Ver menos proyectos' : 'Ver todos los proyectos'}
+            </button>
           </div>
         )}
       </div>
