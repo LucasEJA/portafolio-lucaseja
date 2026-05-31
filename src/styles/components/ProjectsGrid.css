@@ -43,21 +43,16 @@
   align-items: center;
   gap: 0.75rem;
   padding: 12px 24px;
-  background: linear-gradient(135deg, var(--accent-color-1), var(--accent-color-2));
-  color: white;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 500;
   transition: all 0.3s ease;
-  border: none;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+  min-height: 48px;
 }
 
 .view-more-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(59, 130, 246, 0.35);
-  background: linear-gradient(135deg, var(--accent-color-2), var(--accent-color-3));
 }
 
 .view-more-btn:active {

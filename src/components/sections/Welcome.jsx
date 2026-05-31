@@ -8,14 +8,19 @@ export const Welcome = () => {
     return (
         <section id="welcome" className="welcome-container glass-section section-shell">
             <div className="welcome-content">
-                <div className="welcome-text">
-                    <p className="welcome-greeting">Hola! Mi nombre es</p>
-                    <h1 className="welcome-name">Lucas Jacinto A.</h1>
-                    <p className="welcome-quote">Desarrollador Full Stack | React • Node.js • PostgreSQL</p>
+                <div className="welcome-hero">
+                    <div className="welcome-photo">
+                        <img src={lucasImage} alt="Foto de Lucas Jacinto A." loading="lazy" />
+                    </div>
+                    <div className="welcome-text">
+                        <p className="welcome-greeting">Hola! Mi nombre es</p>
+                        <h1 className="welcome-name">Lucas Jacinto A.</h1>
+                        <p className="welcome-quote">Desarrollador Full Stack | React • Node.js • PostgreSQL</p>
+                    </div>
                 </div>
-                
+
                 <StackShowcase />
-                
+
                 <div className="welcome-socials">
                     <a 
                         href="https://github.com/LucasEJA" 

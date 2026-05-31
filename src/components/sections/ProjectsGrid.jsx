@@ -34,7 +34,7 @@ export const ProjectsGrid = () => {
 
         {hasMoreProjects && (
           <div className="projects-cta">
-            <a href="#projects-gallery" className="view-more-btn">
+            <a href="#projects-gallery" className="view-more-btn glass-button">
               Ver todos los proyectos
               <FaExternalLinkAlt size={14} />
             </a>
