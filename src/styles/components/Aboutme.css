@@ -19,11 +19,11 @@
   font-size: clamp(1.4rem, 2vw, 1.8rem);
   color: var(--text-primary);
   font-weight: 700;
-  text-align: left;
+  text-align: center;
 }
 
 .about-me-paragraph {
-  text-align: left;
+  text-align: justify;
   color: var(--text-secondary);
   font-size: clamp(0.95rem, 1.4vw, 1.05rem);
   line-height: 1.6;
