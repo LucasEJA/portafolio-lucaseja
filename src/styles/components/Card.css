@@ -73,16 +73,21 @@
 
 @media (max-width: 480px) {
     .card-container {
-        padding: var(--spacing-md);
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .card-content {
+        gap: 0.5rem;
     }
     
     .card-icon {
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
     }
     
     .card-text {
         font-size: var(--font-size-xs);
+        line-height: 1.2;
     }
 }
 
