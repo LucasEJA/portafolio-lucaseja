@@ -79,7 +79,7 @@
 
 .submit-btn {
   background-color: var(--accent-color-1);
-  color: var(--text-primary);
+  color: white;
   min-height: 48px;
   padding: 14px 20px;
   font-size: 1rem;
@@ -108,7 +108,7 @@
 }
 
 .required-indicator {
-  color: var(--accent-color-1);
+  color: #ef4444;
   font-weight: bold;
 }
 

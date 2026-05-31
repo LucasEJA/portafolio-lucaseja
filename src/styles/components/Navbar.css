@@ -109,7 +109,7 @@ html {
   align-items: center;
   padding: 10px 16px;
   background-color: var(--accent-color-1);
-  color: #fff;
+  color: white;
   text-decoration: none;
   border-radius: var(--radius-md);
   font-size: 0.95rem;
@@ -134,7 +134,7 @@ html {
 }
 
 /* Estilos responsivos */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   :root {
     --nav-height: 55px;
   }
