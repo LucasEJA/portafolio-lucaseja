@@ -114,3 +114,23 @@
     font-size: 0.55rem;
   }
 }
+
+/* Temas específicos para el Loader */
+[data-theme="light"] .loader-overlay {
+  background: linear-gradient(180deg, #f8fafc, #e2e8f0);
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .loader-pattern circle,
+[data-theme="light"] .loader-pattern polygon {
+  stroke: rgba(71, 85, 105, 0.15);
+}
+
+[data-theme="light"] .loader-letter.is-locked {
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .loader-letter.is-scrambling {
+  color: var(--accent-color-1);
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.35);
+}
