@@ -1,5 +1,7 @@
 export const SKILLS_DATA = [
-  // Frontend
+  // ==========================================
+  // FRONTEND
+  // ==========================================
   {
     iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     name: "HTML",
@@ -13,6 +15,16 @@ export const SKILLS_DATA = [
   {
     iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     name: "JavaScript",
+    category: "frontend"
+  },
+  {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    name: "TypeScript",
+    category: "frontend"
+  },
+  {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg",
+    name: "Vite",
     category: "frontend"
   },
   {
@@ -36,7 +48,9 @@ export const SKILLS_DATA = [
     category: "frontend"
   },
 
-  // Backend
+  // ==========================================
+  // BACKEND
+  // ==========================================
   {
     iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     name: "Python",
@@ -67,8 +81,30 @@ export const SKILLS_DATA = [
     name: "Spring Boot",
     category: "backend"
   },
+  {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
+    name: "Prisma ORM",
+    category: "backend"
+  },
+  {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg",
+    name: "Sequelize",
+    category: "backend"
+  },
+  {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
+    name: "Socket.io",
+    category: "backend"
+  },
+  {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+    name: "GraphQL",
+    category: "backend"
+  },
 
-  // Database
+  // ==========================================
+  // DATABASE
+  // ==========================================
   {
     iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
     name: "MySQL",
@@ -94,8 +130,15 @@ export const SKILLS_DATA = [
     name: "MongoDB",
     category: "database"
   },
+  {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+    name: "Redis",
+    category: "database"
+  },
 
-  // Tools
+  // ==========================================
+  // TOOLS
+  // ==========================================
   {
     iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     name: "Git",
@@ -117,7 +160,14 @@ export const SKILLS_DATA = [
     category: "tools"
   },
 
-  // Infrastructure
+  // ==========================================
+  // INFRASTRUCTURE
+  // ==========================================
+  {
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    name: "Docker",
+    category: "infrastructure"
+  },
   {
     iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg",
     name: "Nginx",
@@ -137,7 +187,7 @@ export const SKILLS_DATA = [
     iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
     name: "Google Cloud",
     category: "infrastructure"
-  },
+  }
 ];
 
 export const getSkillsByCategory = (category) => {

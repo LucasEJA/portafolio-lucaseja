@@ -28,10 +28,9 @@ export const NAVIGATION_ITEMS = [
 
 // Habilidades personales
 export const SOFT_SKILLS = [
-  "Aprendizaje Ágil",
-  "Resiliencia ante Desafíos",
-  "Enfoque Optimista y Proactivo",
-  "Compromiso con la Puntualidad",
-  "Liderazgo",
-  "Trabajo en Equipo"
+  "Resolución Pragmática de Problemas",
+  "Trabajo en Equipo y Comunicación",
+  "Adaptabilidad a Nuevos Stacks",
+  "Orientación a Resultados y Métricas",
+  "Buenas Prácticas de Código Limpio"
 ];
