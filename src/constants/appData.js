@@ -3,7 +3,7 @@ export const SOCIAL_LINKS = {
   github: "https://github.com/LucasEJA",
   linkedin: "https://www.linkedin.com/in/lucas-enmanuel-jacinto-alvarez-249324270/",
   instagram: "https://www.instagram.com/lucas_enmanuelp/profilecard/?igsh=Y3diNmJzcHI0MDB0",
-  cv: "https://www.canva.com/design/DAGV7V5MqQs/wF7hV91lCGykyNKE8yIVrA/edit?utm_content=DAGV7V5MqQs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+  cv: "https://canva.link/q07s4n52hz2ya48"
 };
 
 // Información personal
